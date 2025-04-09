@@ -151,11 +151,11 @@ Use the [K-Map method](https://github.com/STEMgraph/4b957490-badf-4264-b9f2-1b5a
 <details>
 <summary>The final functions</summary>
 
-Q<sub>0</sub> = A<sub>0</sub> XOR B<sub>0</sub> 
+Q<sub>0</sub> = A<sub>0</sub>.!B<sub>0</sub>+!A<sub>0</sub>B<sub>0</sub>
 
-Q<sub>1</sub> = (A<sub>1</sub> XOR B<sub>1</sub>) XOR (A<sub>0</sub> XOR B<sub>0</sub>)
+Q<sub>1</sub> = B<sub>1</sub>.!B<sub>0</sub>.!A<sub>1</sub>+B<sub>1</sub>.!A<sub>1</sub>.!A<sub>0</sub>+!B<sub>1</sub>.A<sub>1</sub>.!A<sub>0</sub>+!B<sub>1</sub>.!B<sub>0</sub>.A<sub>1</sub>+B<sub>1</sub>.B<sub>0</sub>.A<sub>1</sub>.A<sub>0</sub>+!B<sub>1</sub>.B<sub>0</sub>.!A<sub>1</sub>.A<sub>0</sub>
 
-C<sub>out</sub> = A<sub>0</sub> AND B<sub>0</sub>
+C<sub>out</sub> = A<sub>0</sub>.B<sub>1</sub>.B<sub>0</sub>+A<sub>1</sub>.A<sub>0</sub>.B<sub>0</sub>+A<sub>1</sub>.B<sub>1</sub>
 
 </details>
 
@@ -166,7 +166,7 @@ Using your Boolean equations, build a logic network in [CircuitVerse](https://ci
 
 <details>
 <summary>Your solution</summary>
-A share link to your solution goes here: <a href=".................">Link!</a>
+A share link to your solution goes here:[circuitverse](https://circuitverse.org/users/306430/projects/task4_p1)
 </details>
 
 ---
