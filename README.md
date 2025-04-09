@@ -67,19 +67,31 @@ When you have finished working, in Moodle, click "Add solution" and submit the l
 ### Task 1: Mapping Symbols to Binary
 Fill out the following table, mapping decimal numbers `0` through `15` to their binary representations:
 
-| Decimal | Binary Representation |
+| Decimal | Binary Representation  |
 |---------|------------------------|
 | 0       | 0000                   |
 | 1       | 0001                   |
-| ...     | ...                    |
-| 15      | ????                   |
+| 2       | 0010                   |
+| 3       | 0011                   |
+| 4       | 0100                   |
+| 5       | 0101                   |
+| 6       | 0110                   |
+| 7       | 0111                   |
+| 8       | 1000                   |
+| 9       | 1001                   |
+| 10      | 1010                   |
+| 11      | 1011                   |
+| 12      | 1100                   |
+| 13      | 1101                   |
+| 14      | 1110                   |
+| 15      | 1111                   |
 
 **How many binary digits (bits) are needed?**
 
 Explain how to calculate the number of bits required:
 <details>
 <summary>Your Answer</summary>
-Erase this text and write your answer here!
+man braucht 4 bit, um die Zahlen von 0 bis 15 darzustellen.Um es zu berechnen muss man die Gleichung Anzahl_der_benögtite_bits=ld(n+1), wobei n die größte darzustellende Zahl ist.
 </details>
 
 ---
@@ -107,13 +119,24 @@ Refer to the truth table of a 1-bit full adder:
 #### Your Task
 Create a truth table for a **2-bit adder** without carry-in. What are the possible inputs and outputs?
 
->   Your
->
->   table
->
->   goes
->
->   here!
+| Decimal | A<sub>1</sub>  | A<sub>0</sub>  | B<sub>1</sub>  | B<sub>0</sub>  | Sum (S)  | C<sub>out</sub> | Q<sub>1</sub>  | Q<sub>0</sub>  |
+|---------|----|----|----|----|----------|-----------------|----|----|
+| 0  | 0  | 0  | 0  | 0  |    0     |        0        |  0 |  0 |
+| 1  | 0  | 0  | 0  | 1  |    1     |        0        |  0 |  1 |
+| 2  | 0  | 0  | 1  | 0  |    2     |        0        |  1 |  0 |
+| 3  | 0  | 0  | 1  | 1  |    3     |        0        |  1 |  1 |
+| 4  | 0  | 1  | 0  | 0  |    1     |        0        |  0 |  1 |
+| 5  | 0  | 1  | 0  | 1  |    2     |        0        |  1 |  0 |
+| 6  | 0  | 1  | 1  | 0  |    3     |        0        |  1 |  1 |
+| 7  | 0  | 1  | 1  | 1  |    4     |        1        |  0 |  0 |
+| 8  | 1  | 0  | 0  | 0  |    2     |        0        |  1 |  0 |
+| 9  | 1  | 0  | 0  | 1  |    3     |        0        |  1 |  1 |
+| 10 | 1  | 0  | 1  | 0  |    4     |        1        |  0 |  0 |
+| 11 | 1  | 0  | 1  | 1  |    5     |        1        |  0 |  1 |
+| 12 | 1  | 1  | 0  | 0  |    3     |        0        |  1 |  1 |
+| 13 | 1  | 1  | 0  | 1  |    4     |        1        |  0 |  0 |
+| 14 | 1  | 1  | 1  | 0  |    5     |        1        |  0 |  1 |
+| 15 | 1  | 1  | 1  | 1  |    6     |        1        |  1 |  0 |
 
 ---
 
@@ -128,11 +151,11 @@ Use the [K-Map method](https://github.com/STEMgraph/4b957490-badf-4264-b9f2-1b5a
 <details>
 <summary>The final functions</summary>
 
-Q<sub>0</sub> = .......
+Q<sub>0</sub> = A<sub>0</sub> XOR B<sub>0</sub> 
 
-Q<sub>1</sub> = .......
+Q<sub>1</sub> = (A<sub>1</sub> XOR B<sub>1</sub>) XOR (A<sub>0</sub> XOR B<sub>0</sub>)
 
-C<sub>out</sub> = .......
+C<sub>out</sub> = A<sub>0</sub> AND B<sub>0</sub>
 
 </details>
 
